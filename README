@@ -1,0 +1,89 @@
+README
+
+Just some notes for the moment ...
+
+Git setup
+
+Global setup:
+ Download and install Git
+  git config --global user.name "Giammy"
+  git config --global user.email giangiammy@gmail.com
+  Add your public key
+        
+Next steps:
+  mkdir mcompute
+  cd mcompute
+  git init
+  touch README
+  git add README
+  git commit -m 'first commit'
+  git remote add origin git@github.com:giammy/mcompute.git
+  git push origin master
+      
+Existing Git Repo?
+  cd existing_git_repo
+  git remote add origin git@github.com:giammy/mcompute.git
+  git push origin master
+      
+Importing a Subversion Repo?
+  Click here
+      
+When you're done:
+  Continue
+
+
+Some tests:
+
+~/Desktop/Dropbox/data-rem1/Repository/dakota-work/matrix_c $ ./mcompute --rowsA 1000 --colsA 2000 --colsB 3000
+Arguments:
+prgName       = ./mcompute
+rowsA         = 1000
+colsA	        = 2000
+colsB		  = 3000
+rowAhowmany   = -1
+rowAsize      = -1
+colAhowmany   = -1
+colAsize      = -1
+colBhowmany   = -1
+colBsize      = -1
+debug         = 10
+compactOutput = 0
+4 8 8
+BLAS 
+Elapsed CPU  =         5.757131e+06 us
+Elapsed WALL =         5.773383e+06 us
+ATLAS 
+Elapsed CPU  =         2.980786e+06 us
+Elapsed WALL =         2.981395e+06 us
+GOLD  
+Elapsed CPU  =         4.410722e+07 us
+Elapsed WALL =         4.415252e+07 us
+~/Desktop/Dropbox/data-rem1/Repository/dakota-work/matrix_c $ ./mcompute --rowsA 1000 --colsA 20000 --colsB 3000
+Arguments:
+prgName       = ./mcompute
+rowsA         = 1000
+colsA	        = 20000
+colsB		  = 3000
+rowAhowmany   = -1
+rowAsize      = -1
+colAhowmany   = -1
+colAsize      = -1
+colBhowmany   = -1
+colBsize      = -1
+debug         = 10
+compactOutput = 0
+4 8 8
+BLAS 
+Elapsed CPU  =         5.890228e+07 us
+Elapsed WALL =         6.193084e+07 us
+ATLAS 
+Elapsed CPU  =         2.999326e+07 us
+Elapsed WALL =         3.078588e+07 us
+GOLD  
+Elapsed CPU  =         7.865785e+08 us
+Elapsed WALL =         8.011241e+08 us
+
+
+
+ 2 000 000 x  6 000 000 ->  6s(blas3) 3s(atlas) 44s(plain)
+20 000 000 x 60 000 000 -> 60s       30s       800s
