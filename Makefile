@@ -2,7 +2,7 @@
 # Test GEMM product
 #
 
-BLASDIR=/Users/giammy/Desktop/Dropbox/data-rem1/Repository/dakota-work/matrix_c/blas
+BLASDIR=/Users/giammy/Desktop/Dropbox/data-rem1/Repository/dakota-work/matrix_c/mcompute/blas
 BLASLIBDIR=$(BLASDIR)/CBLAS/lib
 BLASLIBS=$(BLASLIBDIR)/LINUX/cblas_LINUX.a $(BLASLIBDIR)/blas_LINUX.a
 
