@@ -1,6 +1,17 @@
 README
 
-Just some notes for the moment ...
+A package including various algorithms for GEMM
+(General Matrix Matrix Multiply) with a common
+interface to benchmark them. 
+
+The package is available at
+https://github.com/giammy/mcompute
+
+
+====================================================
+
+
+The following are Just some notes for the moment ...
 
 Git setup
 
